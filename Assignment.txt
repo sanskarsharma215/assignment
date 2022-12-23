@@ -1,0 +1,336 @@
+Assignment 7.1 (20pts)
+
+Q1. Demonstrate following concepts using any programming language-
+Ans- So I will be using C++ 
+
+   1. FOR LOOP
+There are instances when it is necessary to repeat an operation n times or more. When we   need to repeatedly run a set of statements, we utilize loops. 
+Here is the syntax of for loop -'
+
+for(initialization;condition;updation){
+       //body of the loop
+}
+
+For example If we want to print numbers for 1 to 10 so we can use for loop.
+for(int i=1;i<=10;i++){
+  cout<<i;
+}
+Output will be : 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 ,10.
+
+
+2. While Loop
+While loops are employed when we are unsure of the precise number of loop iterations in advance. Depending on the results of the test, the loop execution is stopped.
+A loop primarily comprises of the three statements initialization expression, test expression, and update expression, as we've already said. The arrangement of these 
+three statements varies between the three looping constructs—For, while, and do while—in terms of syntax.
+Here is the syntax of While Loop -
+
+initialization expression;
+while (test_expression)
+{
+   // statements
+ 
+  update_expression;
+}
+ Here is the example :\
+ 
+// initialization expression
+    int i = 1;
+ 
+    // test expression
+    while (i < 6) {
+        cout << "Hello World\n";
+ 
+        // update expression
+        i++;
+    }
+Output:
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+
+3. If Statement
+To declare a block of C++ code that will run if a condition is true, use the if statement.
+Here is the syntax :
+if (condition) {
+  // block of code to be executed if the condition is true
+}
+
+In the example below, we test two values to find out if 2 is greater than 1. If the condition is true, print some text:
+if (2 > 1) {
+  cout << "2 is greater than 1";
+}
+
+So above condition is true so output will ne 2 is greater than 1.
+
+
+4.Else Statement
+If the condition is false, define a block of code to be run by using the else statement.
+Here is the syntax:
+if (condition) {
+  // block of code to be executed if the condition is true
+} else {
+  // block of code to be executed if the condition is false
+}
+
+For example:
+int time = 2;
+if (time < 1) {
+  cout << "Good Morning.";
+} else {
+  cout << "Good Night.";
+}
+// Outputs "Good Night."
+
+In the example above, time (2) is greater than 1, so the condition is false. Because of this, 
+we move on to the else condition and print to the screen "Good Night". 
+If the time was less than 1, the program would print "Good Morning".
+
+
+5.Switch Statement
+To choose which of several code blocks should be run, use the switch statement.
+Syntax;
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+     The process is as follows:
+     One evaluation of the switch expression takes place.
+     Each case's values are compared to the expression's value.
+     If a match is found, the related piece of code is run.
+     It's optional to use the break and default keywords.
+     The following example calculates the weekday name using the weekday number:
+	 
+The Break Keyword:
+C++ exits the switch block when it encounters the break keyword.
+This will halt further code execution and case testing within the block.
+When a match is made and the work is over, a break is necessary. More testing is not necessary.
+
+The default keyword
+If there is no case match, the default keyword defines some code to execute.
+	 
+Here is example
+int day = 4;
+switch (day) {
+  case 1:
+    cout << "Monday";
+    break;
+  case 2:
+    cout << "Tuesday";
+    break;
+  case 3:
+    cout << "Wednesday";
+    break;
+  case 4:
+    cout << "Thursday";
+    break;
+  case 5:
+    cout << "Friday";
+    break;
+  case 6:
+    cout << "Saturday";
+    break;
+  case 7:
+    cout << "Sunday";
+    break;
+  default:
+    cout<< "Wrong input";
+}
+// Outputs "Thursday" (day 4)
+
+
+6. Recursion
+What is Recusrsion:
+ Recursion is the action of a function calling itself either directly or indirectly, 
+ and the associated function is known as a recursive function. A recursive method can
+ be used to tackle some issues with relative ease. Towers of Hanoi (TOH), 
+ inorder/preorder/postorder tree traversals, DFS of Graph, etc. are a few examples of these issues. 
+ By calling a duplicate of itself and resolving the original problem's smaller subproblems, 
+ a recursive function solves a specific problem. As and when necessary, many additional recursive 
+ calls can be produced. It is crucial to understand that in order to stop this recursion process, 
+ we must present a specific situation. Therefore, we may conclude that the function calls itself 
+ with a simplified version of the initial issue each time.
+
+Need of Recursion
+Recursion is a fantastic approach that allows us to shorten our code and make 
+it simpler to understand and write. Compared to the iteration approach, it offers
+ a few benefits . Recursion is one of the finest ways to complete a work that may
+ be described by its related subtasks. The Factorial of a number, for instance.
+ 
+Because the recursive function adds to the stack with each call and stores the items 
+there until the call is concluded, recursion consumes additional memory. Like the stack 
+data structure, the recursive function makes use of the LIFO (LAST IN FIRST OUT) structure.
+
+Base Condition along with the example;-
+The base case solution is given in the recursive algorithm,
+ and the larger problem's solution is given in terms of smaller issues.
+ int fact(int n)
+{
+    if (n < = 1) // base case
+        return 1;
+    else    
+        return n*fact(n-1);    
+}
+In the above example, the base case for n < = 1 is defined and the larger 
+value of a number can be solved by converting to a smaller one till the base 
+case is reached.
+
+
+7. Binary Search Tree
+
+The following characteristics of a binary search tree, a node-based binary tree data structure, are present:
+A node's left subtree only has nodes with keys lower than the node itself.
+Only nodes with keys higher than the node's key are found in the right subtree of the node.
+A binary search tree must also be present in both the left and right subtrees.
+There cannot be any redundant nodes.
+
+In order to speed up operations like search, minimum, and maximum, Binary Search Trees give 
+an ordering among keys. If there is no order, we might have to compare each key in order to
+look for a certain key.
+
+Several Fascinating Facts
+
+BST's inorder traversal always results in sorted output.
+Only Preorder, Postorder, or Level Order traversal is required 
+to build a BST. Keep in mind that by sorting the only supplied traversal, 
+we can always obtain an inorder traversal.
+The Catalan Number is the quantity of different BSTs with n unique keys.
+
+Here is the code of How to search in a BST
+
+// C++ function to search a given key in a given BST
+struct Treenode* search(struct Treenode* root, int key)
+{
+    // Base Cases: root is null or key is present at root
+    if (root == NULL || root->key == key)
+       return root;
+    
+    // Key is greater than root's key
+    if (root->key < key)
+       return search(root->right, key);
+ 
+    // Key is smaller than root's key
+    return search(root->left, key);
+}
+
+8. Closure
+ A closure is made of of references to the state of the environment and a function 
+ that has been wrapped up (enclosed) (the lexical environment). In other words, a 
+ closure enables inner functions to access the scope of an outside function. Closures 
+ are formed whenever a function is created in JavaScript, during function creation time.
+ 
+ Declare a function within another function and expose it to be used as a closure. Return 
+ it or send it to another function to make a function exposed.
+
+ Even after the outer function has returned, the inner function will still have access to 
+ the variables in its scope.
+ 
+ Here is the example:-
+  const add = (function () {
+      let counter = 0;
+      return function () {counter += 1; return counter}
+  })();
+
+  add();
+  add();
+  add();
+
+  // the counter is now 3
+  Explanation:- 
+  A self-invoking function's return value is given to the variable add.
+  one self-invoking function execution occurs. It also returns a function expression after setting the counter to zero.
+  This turns adding into a function. The ability to access the counter in the parent scope is what makes it "great."
+  A closure in JavaScript is what this is. It enables "private" variables to be used in functions.
+  The anonymous function's scope protects the counter, which can only be modified via the add function.
+
+Note :- Even after the parent function has closed, a closure is a function that still retains access to the parent scope.
+
+1.2 : Write an implementation of getElementByld, which performs the same basic task as that of 
+      actual getElementById, (don't use shortcuts like queryselector)
+Ans- 
+      Basically HTML DOM is in tree structure and in order to find the DOM element in th HTML
+	  best algorithm would be to implement that search functionality. In this case, DFS/BFS.
+	  We can simply construct a search function by DOM id by making minor adjustments to the DFS function.
+	  Here is the implementation :
+	  /**
+         * @param {HTMLElement} root
+         * @param {string} id
+         * @returns {HTMLElement|null}
+      */
+      const getElementById = (root, id) => {
+         const stack = [root];
+         while (stack.length > 0) {
+            const node = stack.pop();
+            if (node.id === id) {
+               return node;
+            }
+            for (const child of node.children) { 
+                stack.push(child);
+            }
+        }
+         return null;
+      };
+	  
+	  
+8.2 Given a number x, find out if it is a prime number or not, use javascript and find out the 
+    difference between Next prime number after X and X
+function isPrime(n)
+{
+    // Corner cases
+    if (n <= 1) return false;
+    if (n <= 3) return true;
+     
+    // This is checked so that we can skip
+    // middle five numbers in below loop
+    if (n%2 == 0 || n%3 == 0) return false;
+     
+    for (let i=5; i*i<=n; i=i+6)
+        if (n%i == 0 || n%(i+2) == 0)
+        return false;
+     
+    return true;
+}
+function nextPrime(N)
+{
+ 
+    // Base case
+    if (N <= 1)
+        return 2;
+ 
+    let prime = N;
+    let found = false;
+ 
+    // Loop continuously until isPrime returns
+    // true for a number greater than n
+    while (!found) {
+        prime++;
+ 
+        if (isPrime(prime))
+            found = true;
+    }
+ 
+    return prime;
+}
+const x = 5;
+if (isPrime(x)) {
+    console.log(`${x} is a prime number`);
+} else {
+    console.log(`${x} is a not prime number`);
+}
+
+const nxtPrime = nextPrime(x);
+console.log(`${nxtPrime} is the next prime number after 5`);
+const diff=nxtPrime-x;
+console.log(`${diff} is the difference next prime number and X`);
+	  
+
+
+	  
+	  
